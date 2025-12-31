@@ -1,6 +1,6 @@
 {
-  "name": "blackjack-deck",
-  "private": true,
+  "name": "@blackjack-deck/repo",
+  "private": false,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
