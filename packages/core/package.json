@@ -1,6 +1,15 @@
 {
   "name": "@blackjack-deck/core",
   "version": "0.1.0",
+  "description": "Core blackjack game logic and utilities",
+  "keywords": ["blackjack", "cards", "game"],
+  "author": "Fredrik Johansson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fjohanssondev/blackjack-deck"
+  },
+  "files": ["dist"],
+  "license": "MIT",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

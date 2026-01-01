@@ -1,6 +1,15 @@
 {
   "name": "@blackjack-deck/icons",
   "version": "0.1.0",
+  "description": "React icon components for playing card suits (spades, hearts, diamonds, clubs) with outline and filled variants",
+  "keywords": ["blackjack", "cards", "icons", "react", "svg", "suits"],
+  "author": "Fredrik Johansson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fjohanssondev/blackjack-deck"
+  },
+  "files": ["dist"],
+  "license": "MIT",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
@@ -35,8 +44,5 @@
     "react": "^19.2.3",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
