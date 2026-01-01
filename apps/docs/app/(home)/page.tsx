@@ -1,14 +1,15 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col justify-center text-center flex-1">
-      <h1 className="text-2xl font-bold mb-4">Hello World</h1>
+      <h1 className="text-2xl font-bold mb-4">This is WIP</h1>
       <p>
-        You can open{' '}
+        We're building the docs while we're also building the library. You can
+        visit{" "}
         <Link href="/docs" className="font-medium underline">
           /docs
-        </Link>{' '}
+        </Link>{" "}
         and see the documentation.
       </p>
     </div>

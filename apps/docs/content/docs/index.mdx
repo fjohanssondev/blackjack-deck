@@ -1,13 +1,131 @@
 ---
-title: Hello World
-description: Your first document
+title: Quick Start
+description: Getting Started with Blackjack-deck
+icon: Rocket
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+import { Accordions, Accordion } from "fumadocs-ui/components/accordion"
 
-## What is Next?
+## Introduction
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
-</Cards>
+Blackjack-deck is a **comprehensive TypeScript library** for building blackjack games and card-based applications. It provides everything you need from core game logic to beautiful React components.
+
+Blackjack-deck consists of different packages:
+
+- **@blackjack-deck/core** - Game logic, hand evaluation, and utilities
+- **@blackjack-deck/icons** - Card suit icons with multiple variants
+- **@blackjack-deck/react** - Headless React components _(coming soon)_
+
+<Callout title="Want to learn more?">
+  Read our in-depth [What is Blackjack-deck](/docs/what-is-blackjack-deck) introduction.
+</Callout>
+
+### Terminology
+
+**Headless Components:** Unstyled, accessible components that provide logic and structure without enforcing visual design.
+
+**Tree-shaking:** Modern bundlers only include the code you actually import, keeping bundle sizes small.
+
+**TypeScript:** A typed superset of JavaScript that provides excellent developer experience and type safety.
+
+Some basic knowledge of React.js and TypeScript would be useful for building card games.
+
+## Installation
+
+Install the packages you need:
+```bash tab="npm"
+# Core game logic
+npm install @blackjack-deck/core
+
+# Icon components
+npm install @blackjack-deck/icons
+
+# Or both
+npm install @blackjack-deck/core @blackjack-deck/icons
+```
+```bash tab="pnpm"
+# Core game logic
+pnpm add @blackjack-deck/core
+
+# Icon components
+pnpm add @blackjack-deck/icons
+
+# Or both
+pnpm add @blackjack-deck/core @blackjack-deck/icons
+```
+```bash tab="yarn"
+# Core game logic
+yarn add @blackjack-deck/core
+
+# Icon components
+yarn add @blackjack-deck/icons
+
+# Or both
+yarn add @blackjack-deck/core @blackjack-deck/icons
+```
+```bash tab="bun"
+# Core game logic
+bun add @blackjack-deck/core
+
+# Icon components
+bun add @blackjack-deck/icons
+
+# Or both
+bun add @blackjack-deck/core @blackjack-deck/icons
+```
+
+## Quick Examples
+
+### Core - Game Logic
+```typescript
+import { createDeck, shuffle, calculateHandValue, isBlackjack } from '@blackjack-deck/core';
+
+// Create and shuffle a deck
+const deck = shuffle(createDeck());
+
+// Evaluate a hand
+const playerHand = [
+  { suit: 'spades', rank: 'A' },
+  { suit: 'hearts', rank: 'K' }
+];
+
+console.log(calculateHandValue(playerHand)); // 21
+console.log(isBlackjack(playerHand)); // true
+```
+
+### Icons - Card Suits
+```typescript
+import { Spades, Hearts } from '@blackjack-deck/icons/outline';
+import { Diamonds, Clubs } from '@blackjack-deck/icons/filled';
+
+function MyCard() {
+  return (
+    <div className="flex gap-2">
+      <Spades className="w-6 h-6 text-black" />
+      <Hearts className="w-6 h-6 text-red-500" />
+      <Diamonds className="w-6 h-6 text-red-500" />
+      <Clubs className="w-6 h-6 text-black" />
+    </div>
+  );
+}
+```
+
+<Callout title='Building a Full Game?'>
+  Check out our [Building a Blackjack Game](/docs/guides/building-a-game) tutorial.
+</Callout>
+
+## Next Steps
+
+<Accordions>
+  <Accordion title="Core Package">
+    Learn about deck operations, hand evaluation, and game rules in the [Core Documentation](/docs/packages/core).
+  </Accordion>
+  
+  <Accordion title="Icons Package">
+    Explore all icon variants and styling options in the [Icons Documentation](/docs/packages/icons).
+  </Accordion>
+  
+  <Accordion title="React Components">
+    Build headless card game UIs with [React Components](/docs/packages/react) _(coming soon)_.
+  </Accordion>
+</Accordions>
