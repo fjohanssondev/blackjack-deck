@@ -39,6 +39,7 @@
       "version": "0.0.0",
       "dependencies": {
         "@blackjack-deck/icons": "workspace:*",
+        "@blackjack-deck/react": "workspace:*",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
       },
