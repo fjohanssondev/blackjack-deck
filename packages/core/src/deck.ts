@@ -61,5 +61,5 @@ export function shuffle(cards: Card[]): Deck {
  */
 
 export function draw(deck: Deck) {
-  return shuffle(deck).pop();
+  return deck.pop();
 }
