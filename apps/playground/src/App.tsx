@@ -1,10 +1,14 @@
-import { Spades, Clubs } from "@blackjack-deck/icons";
+import { IconsFilled, IconsOutlined } from "./icons";
 
 function App() {
   return (
     <div>
-      <Spades />
-      <Clubs />
+      <h1>Playground</h1>
+      <section>
+        <h2>Ikoner</h2>
+        <IconsOutlined />
+        <IconsFilled />
+      </section>
     </div>
   );
 }
