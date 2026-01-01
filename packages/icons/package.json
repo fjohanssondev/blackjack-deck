@@ -2,14 +2,24 @@
   "name": "@blackjack-deck/icons",
   "version": "0.1.0",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./outline": {
+      "types": "./dist/outline/index.d.ts",
+      "import": "./dist/outline/index.js",
+      "require": "./dist/outline/index.cjs"
+    },
+    "./filled": {
+      "types": "./dist/filled/index.d.ts",
+      "import": "./dist/filled/index.js",
+      "require": "./dist/filled/index.cjs"
     }
   },
   "scripts": {
