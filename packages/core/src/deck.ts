@@ -38,6 +38,20 @@ export function createDeck() {
 }
 
 /**
+ * Creates multiple standard decks combined into one shoe
+ * Used in casino blackjack where 6-8 decks are shuffled together to prevent card counting
+ * @param numberOfDecks - Number of 52-card decks to combine (default: 1)
+ * @returns A combined deck with numberOfDecks × 52 cards
+ * @example
+ * createMultipleDecks(1)  // Returns 52 cards (single deck)
+ * createMultipleDecks(6)  // Returns 312 cards (standard casino shoe)
+ */
+
+export function createMultipleDecks(numberOfDecks: number = 1): Deck {
+  return Array.from({ length: numberOfDecks }, () => createDeck()).flat();
+}
+
+/**
  * Shuffles a deck using Fisher-Yates algorithm
  * @param cards - The deck to shuffle
  * @returns A new shuffled deck
